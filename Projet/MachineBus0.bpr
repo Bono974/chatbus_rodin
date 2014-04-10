@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_desc/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager_peut_monter∈BOOL">
+<org.eventb.core.prIdent name="usager_peut_monter" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="bus_roule∈BOOL">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_desc_dernier/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv7/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="personnes_a_l_arret⊆Usagers">
+<org.eventb.core.prIdent name="personnes_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="bus_roule∈BOOL">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p0">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2,p3" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p1" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p6"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="passagers'⊆Usagers⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="passagers'⊆Usagers∧⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passagers')≤BusCapacity"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passagers'⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(passagers')"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="passagers'⊆Usagers∧card(passagers')≤BusCapacity"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_desc/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="personnes_a_l_arret⊆Usagers">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="personnes_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="usager_peut_monter∈BOOL">
+<org.eventb.core.prIdent name="usager_peut_monter" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bus_roule∈BOOL">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="personnes_dans_le_bus⊆Usagers">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="personnes_dans_le_bus" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_desc_dernier/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv8/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p2,p4,p1,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passagers_descendre)∧⊤"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="personnes_a_l_arret⊆Usagers">
+<org.eventb.core.prIdent name="personnes_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers_descendre)∧finite(passagers)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="usager_peut_monter∈BOOL">
+<org.eventb.core.prIdent name="usager_peut_monter" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="bus_roule∈BOOL">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p2" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(∅ ⦂ ℙ(Usagers))≤card(passagers')"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(∅ ⦂ ℙ(Usagers))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="personnes_a_l_arret⊆Usagers">
+<org.eventb.core.prIdent name="personnes_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passagers'⊆Usagers∧card(passagers')≤BusCapacity"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act6/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="passagers0'" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees passagers0')" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prIdent name="passagers0'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀passagers'⦂ℙ(Usagers)·passagers'⊆Usagers⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀passagers'⦂ℙ(Usagers)·finite(passagers')"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀passagers'⦂ℙ(Usagers)·⊤⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passagers0')">
+<org.eventb.core.prIdent name="passagers0'" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act6/FIS" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Usagers" org.eventb.core.psManual="true">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∃ goal (inst _)" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∃ goal (inst ∅)" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R30000"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(∅ ⦂ ℙ(Usagers))≤BusCapacity"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀passagers'⦂ℙ(Usagers)·passagers'⊆Usagers⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀passagers'⦂ℙ(Usagers)·finite(passagers')"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀passagers'⦂ℙ(Usagers)·⊤⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃passagers'⦂ℙ(Usagers)·passagers'⊆Usagers∧card(passagers')≤BusCapacity"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∃passagers'⦂ℙ(Usagers)·⊤∧card(passagers')≤BusCapacity"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∃passagers'⦂ℙ(Usagers)·card(passagers')≤BusCapacity"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="0≤BusCapacity"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="∅ ⦂ ℙ(Usagers)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.exI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="bus_arrive/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="Usagers" org.eventb.core.psManual="true">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p8">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p9" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p5,p11" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p4,p7,p3,p1,p5,p6,p8,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1;2;3:30000"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bus_roule=TRUE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="personnes_a_l_arret⊆Usagers">
+<org.eventb.core.prIdent name="personnes_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="bus_roule∈BOOL"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers)∧(card(passagers)=BusCapacity⇒finite(passagers_descendre))∧((card(passagers)=BusCapacity∧card(passagers_descendre)&gt;0)∨(finite(passagers)∧(card(passagers)&lt;BusCapacity⇒finite(passagers_descendre)∧finite(usagers_a_l_arret))))"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="(card(passagers)=BusCapacity∧¬passagers_descendre=(∅ ⦂ ℙ(Usagers)))∨(card(passagers)&lt;BusCapacity⇒finite(usagers_a_l_arret))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers_a_l_arret⊆Usagers"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="⊤∧(card(passagers)=BusCapacity⇒⊤)∧((card(passagers)=BusCapacity∧card(passagers_descendre)&gt;0)∨(⊤∧(card(passagers)&lt;BusCapacity⇒⊤∧finite(usagers_a_l_arret))))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="bus_arrive/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="bus_repart/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="bus_repart/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p9" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p5,p11" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="p4,p7,p1,p5,p6,p8,p2,p14">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="finite(usagers_a_l_arret)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers_descendre=(∅ ⦂ ℙ(Usagers))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="bus_roule∈BOOL"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(usagers_a_l_arret)∧(card(usagers_a_l_arret)=0∨finite(passagers))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bus_roule=FALSE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="finite(usagers_a_l_arret)∧(card(usagers_a_l_arret)=0∨⊤)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="usagers_a_l_arret⊆Usagers"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="card(passagers_descendre)=0"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="passager_desc/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="passager_desc_dernier/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="passager_desc/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p10" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p5,p12" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p8,p1,p5,p7,p9,p2,p6,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Usagers"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passagers_descendre ∖ {p})"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="bus_roule∈BOOL"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="p∈passagers_descendre"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bus_roule=FALSE"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="usagers_a_l_arret⊆Usagers">
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passagers_descendre ∖ {p})≤card(passagers)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_monte/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_monte/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p5" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p8,p13" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p18">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p18,p8,p17" org.eventb.core.prInfHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p26">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p27">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="p7,p11,p1,p8,p9,p10,p3,p6,p2,p15">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Usagers"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="passagers⊆Usagers∧p∈Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="bus_roule=FALSE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="card(passagers)&lt;BusCapacity"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤∧p∈Usagers∧card(passagers)+1 − card(passagers∩{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="usagers_a_l_arret⊆Usagers"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="card(passagers)+1 − card(passagers∩{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="⊤∧card(passagers)+1 − card(passagers∩{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passagers∪{p}⊆Usagers∧card(passagers∪{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="passagers⊆Usagers∧p∈Usagers∧card(passagers)+1 − card(passagers∩{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passagers_descendre=(∅ ⦂ ℙ(Usagers))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="p∈usagers_a_l_arret"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="bus_roule∈BOOL"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="p∈Usagers∧card(passagers)+1 − card(passagers∩{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="passagers∪{p}⊆Usagers⇒finite(passagers∪{p})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(passagers_descendre)=0"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="⊤∧p∈Usagers⇒⊤"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_monte/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p12" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p8,p14" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p6,p10,p1,p8,p9,p11,p2,p7,p3,p4,p16">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Usagers"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(passagers∪{p})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passagers∪{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="passagers_descendre=(∅ ⦂ ℙ(Usagers))"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="p∈usagers_a_l_arret"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="bus_roule∈BOOL"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bus_roule=FALSE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="card(passagers)&lt;BusCapacity"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="usagers_a_l_arret⊆Usagers"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passagers_descendre)=0"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="card(passagers)+1 − card(passagers∩{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_monte/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p11" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p7,p13" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with passagers_descendre=∅" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p15">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="p5,p9,p1,p7,p8,p10,p2,p6,p3,p15">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Usagers"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passagers∪{p})"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passagers_descendre=(∅ ⦂ ℙ(Usagers))"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="card(∅ ⦂ ℙ(Usagers))≤card(passagers)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="p∈usagers_a_l_arret"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="card(∅ ⦂ ℙ(Usagers))≤card(passagers)+1 − card(passagers∩{p})"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="bus_roule∈BOOL"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="0≤card(passagers)+1 − card(passagers∩{p})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)+1 − card(passagers∩{p})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bus_roule=FALSE"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers∪{p})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="usagers_a_l_arret⊆Usagers"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(passagers_descendre)=0"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_monte/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv9/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2,p3" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p1,p5" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="card(passagers)≤BusCapacity">
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="passagers⊆Usagers">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passagers⊆Usagers∧⊤">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="bus_roule=FALSE⇒⊤"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="passagers⊆Usagers⇒⊤">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="bus_roule=FALSE⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity">
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="card(passagers')≤BusCapacity"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="TRUE=FALSE⇒card(passagers')&lt;BusCapacity"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="TRUE=FALSE⇒finite(passagers')"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="passagers'⊆Usagers∧card(passagers')≤BusCapacity">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="passagers'⊆Usagers">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="bus_arrive/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4,p5" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p1,p7" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p2,p9" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="FORWARD_INF6" org.eventb.core.prHyps="p1,p10" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="FORWARD_INF8" org.eventb.core.prHyps="p2,p4,p12" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="FORWARD_INF10" org.eventb.core.prHyps="p2,p14" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="FORWARD_INF12" org.eventb.core.prHyps="p2,p3" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="p16"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="FALSE=FALSE⇒⊤"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers⊆Usagers∧⊤">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="bus_roule=FALSE⇒⊤">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passagers⊆Usagers⇒⊤">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(passagers)=BusCapacity⇒⊤"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="bus_roule=FALSE⇒finite(passagers)">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(passagers_descendre)">
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passagers)=BusCapacity⇒finite(passagers_descendre)">
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="bus_roule=FALSE⇒card(passagers)≤BusCapacity">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(card(passagers)=BusCapacity∧card(passagers_descendre)&gt;0)∨(⊤∧(card(passagers)&lt;BusCapacity⇒⊤∧finite(usagers_a_l_arret)))">
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="FALSE=FALSE⇒card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="(card(passagers)=BusCapacity∧card(passagers_descendre)&gt;0)∨(finite(passagers)∧(card(passagers)&lt;BusCapacity⇒finite(passagers_descendre)∧finite(usagers_a_l_arret)))">
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="FALSE=FALSE⇒finite(passagers)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="bus_repart/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p4,p5" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p4,p1,p7" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="FORWARD_INF6" org.eventb.core.prHyps="p9,p10" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="FORWARD_INF8" org.eventb.core.prHyps="p1,p12" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="FORWARD_INF10" org.eventb.core.prHyps="p1,p14" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p18" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="FORWARD_INF5" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="FORWARD_INF8" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p22" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="usagers_a_l_arret=(∅ ⦂ ℙ(Usagers))∨card(passagers)=BusCapacity">
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="TRUE=FALSE⇒card(passagers)&lt;BusCapacity"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="card(usagers_a_l_arret)=0∨finite(passagers)">
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="bus_roule=FALSE⇒card(passagers)&lt;BusCapacity">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers⊆Usagers∧⊤">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passagers⊆Usagers⇒⊤">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤⇒⊤"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="passagers_descendre=(∅ ⦂ ℙ(Usagers))">
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="card(usagers_a_l_arret)=0∨⊤">
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="bus_roule=FALSE⇒finite(passagers)">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊤⇒card(passagers)&lt;BusCapacity"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="card(usagers_a_l_arret)=0∨card(passagers)=BusCapacity">
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="passagers⊆Usagers">
+<org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="card(passagers)&lt;BusCapacity"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="bus_roule=FALSE">
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="card(passagers_descendre)=0">
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TRUE=FALSE⇒⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TRUE=FALSE⇒finite(passagers)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_monte/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1,p2,p12" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p2,p7,p14" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p1,p15" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="FORWARD_INF6" org.eventb.core.prHyps="p2,p8" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="FORWARD_INF8" org.eventb.core.prHyps="p7,p18" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p26"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="p5,p10,p1,p7,p9,p11,p2,p6,p3,p17,p21">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Usagers"/>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="⊤⇒card(passagers∪{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="⊤⇒⊤"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="passagers_descendre=(∅ ⦂ ℙ(Usagers))"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="bus_roule=FALSE⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="⊤⇒finite(passagers∪{p})"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="p∈usagers_a_l_arret"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="bus_roule∈BOOL"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="BusCapacity∈ℕ1"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(passagers_descendre)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="bus_roule=FALSE⇒card(passagers∪{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="bus_roule=FALSE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="card(passagers)&lt;BusCapacity"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="bus_roule=FALSE⇒card(passagers)≤BusCapacity"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="usagers_a_l_arret⊆Usagers"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(passagers_descendre)=0"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="card(passagers)+1 − card(passagers∩{p})≤BusCapacity"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="bus_roule=FALSE⇒finite(passagers∪{p})"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passagers_descendre)≤card(passagers)"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="passagers_descendre⊆Usagers"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="usager_arrive/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Usagers">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2,p3" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p5,p6" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="card(passagers)≤BusCapacity">
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="passagers⊆Usagers"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passagers⊆Usagers∧⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(Usagers)∧finite({usagers_a_l_arret∪passagers})"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="passagers⊆Usagers⇒⊤"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity">
+<org.eventb.core.prIdent name="BusCapacity" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Usagers)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passagers)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤∧finite({usagers_a_l_arret∪passagers})"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>
