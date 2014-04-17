@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="77">
+<org.eventb.core.poFile org.eventb.core.poStamp="79">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="BusCapacity" org.eventb.core.type="ℤ"/>
@@ -104,7 +104,7 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPpassagers_descendrh" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTHYPpassagers_descendrh(" org.eventb.core.poStamp="75">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usagers_a_l_arret=(∅ ⦂ ℙ(Usagers))∨card(passagers)=BusCapacity" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#*|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="passager_desc/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="76">
+<org.eventb.core.poSequent name="passager_desc/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="79">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTALLHYPpassagers_descendri"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passagers_descendre ∖ {p}⊆passagers" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.invariant#7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#+"/>

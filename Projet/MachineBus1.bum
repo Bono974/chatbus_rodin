@@ -44,14 +44,14 @@
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="usager_monte_non_prioritaire">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = FALSE"/>
 <org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="passagers_descendre = ∅"/>
-<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd3" org.eventb.core.predicate="prio ∈ usagers_a_l_arret_non_prioritaire"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd3" org.eventb.core.predicate="non_prio ∈ usagers_a_l_arret_non_prioritaire"/>
 <org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="card(passagers) &lt; BusCapacity"/>
 <org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd5" org.eventb.core.predicate="usagers_a_l_arret_prioritaire = ∅"/>
-<org.eventb.core.action name="," org.eventb.core.assignment="usagers_a_l_arret_non_prioritaire ≔ usagers_a_l_arret_non_prioritaire ∖ {prio}" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="passagers ≔ passagers ∪ {prio}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="usagers_a_l_arret_non_prioritaire ≔ usagers_a_l_arret_non_prioritaire ∖ {non_prio}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="passagers ≔ passagers ∪ {non_prio}" org.eventb.core.label="act2"/>
 <org.eventb.core.refinesEvent name="." org.eventb.core.target="usager_monte"/>
-<org.eventb.core.parameter name="/" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="prio"/>
-<org.eventb.core.witness name="0" org.eventb.core.label="p" org.eventb.core.predicate="p = prio"/>
+<org.eventb.core.parameter name="/" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="non_prio"/>
+<org.eventb.core.witness name="0" org.eventb.core.label="p" org.eventb.core.predicate="p = non_prio"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="usager_arrive_prioritaire">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="usager_arrive"/>
@@ -62,10 +62,10 @@
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="usager_arrive_non_prioritaire">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="usager_arrive"/>
-<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="prio ∈ Usagers ∖ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire ∪ passagers) "/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="usagers_a_l_arret_non_prioritaire ≔ usagers_a_l_arret_non_prioritaire ∪ {prio}" org.eventb.core.label="act1"/>
-<org.eventb.core.parameter name=")" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="prio"/>
-<org.eventb.core.witness name="*" org.eventb.core.label="u" org.eventb.core.predicate="u = prio"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="non_prio ∈ Usagers ∖ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire ∪ passagers) "/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="usagers_a_l_arret_non_prioritaire ≔ usagers_a_l_arret_non_prioritaire ∪ {non_prio}" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name=")" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="non_prio"/>
+<org.eventb.core.witness name="*" org.eventb.core.label="u" org.eventb.core.predicate="u = non_prio"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="passager_veut_desc">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="passager_veut_desc"/>
