@@ -6,7 +6,7 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{subfig}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 %\usepackage{url}
 %\usepackage{array}
 \usepackage{listings}
@@ -45,16 +45,16 @@
 	
 
 \section{ContextUsagers}
-	Nous avons défini un contexte usagers, afin de représenter l'ensemble fini des usagers et la capacité du bus.
+	Nous avons défini un contexte usagers, afin de représenter l'ensemble fini des usagers et la capacité du bus.\\
 
 \section{MachineBus0}
-	La \textbf{MachineBus0} représente notre machine de base. Celle-ci assure la cohérence de l'enchaînement des événements et le respect de la règle de civisme proposée par le sujet. Ainsi, les usagers montent dans le bus qu'après que tous les passagers désirant descendre l'aient fait.
+	La \textbf{MachineBus0} représente notre machine de base. Celle-ci assure la cohérence de l'enchaînement des événements et le respect de la règle de civisme proposée par le sujet. Ainsi, les usagers montent dans le bus qu'après que tous les passagers désirant descendre l'aient fait.\\
 	
 	\subsection{Les ensembles}
 		\begin{description}
 			\item[usagers\_a\_l\_arret] est un sous ensemble des usagers représentant les usagers attendant au prochain arrêt.\\
 			\item[passagers] est un sous ensemble des usagers représentant les passagers du bus. Le cardinal de passager ne peut donc pas dépasser la capacité du bus.\\
-			\item[passagers\_descendre] est un sous ensemble des passagers représentant les passagers souhaitant descendre du bus au prochain arrêt.
+			\item[passagers\_descendre] est un sous ensemble des passagers représentant les passagers souhaitant descendre du bus au prochain arrêt.\\
 		\end{description}
 		
 	\subsection{Les événements}
@@ -81,7 +81,7 @@
 			
 			\item[usager\_monte] est l'événement qui représente le fait qu'un passager monte dans le bus.
 			
-			Cet événement peut se produire que si le bus est arrêté, qu'au moins un usager souhaite monter et que tous les passagers voulant descendre l'ont fait.
+			Cet événement ne peut se produire que si le bus est arrêté, qu'au moins un usager souhaite monter et que tous les passagers voulant descendre l'ont fait.
 			
 			L'effet de cet événement est de convertir l'usager attendant à l'arrêt en passager du bus.\\
 			
@@ -98,6 +98,48 @@
 			L'effet de l'événement est d'ajouter le passager à l'ensemble des passagers souhaitant descendre.\\
 		\end{description}
 		
-	\section{MachineBus1}
+\section{MachineBus1}
+	La \textbf{MachineBus1} est le premier raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la gestion d'usagers prioritaires.\\
 		
+	\subsection{Les ensembles}
+		Dans cette machine, les ensembles décrits précédemment n'ont pas été modifiés, excepté \textbf{usagers\_à\_l\_arrêt}, qui se décompose à présent en deux ensembles afin de gérer des usagers prioritaires :
+		 	
+		\begin{description}
+			\item[usagers\_a\_l\_arret\_prioritaire], qui représente la partition des usagers prioritaires attendant au prochain arrêt.
+			\item[usagers\_a\_l\_arret\_non\_prioritaire], qui représente la partition des usagers non prioritaires attendant au prochain arrêt.\\
+		\end{description}
+				
+	\subsection{Les événements}
+		On retrouve dans ce raffinement la plupart des événements de la machine d'origine, dans lesquels l'ensemble \textbf{usagers\_a\_l\_arret} a été remplacé par l'union des ensembles \textbf{usagers\_a\_l\_arret\_prioritaire} et \textbf{usagers\_a\_l\_arret\_non\_prioritaire}.\\
+		
+		L'événement \textbf{usager\_arrive} a été décomposé en deux événements, afin de gérer les priorités.
+		\begin{description}
+			\item[usagers\_arrive\_prioritaire] est l'événement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			
+			Cet événement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
+			
+			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.\\
+			
+			\item[usagers\_monte\_non\_prioritaire] est l'événement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			
+			Cet événement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
+			
+			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers non prioritaires souhaitant monter.\\
+		\end{description}
+		
+		De même, afin de gérer les priorités, l'événement \textbf{usager\_monte} a été décomposé en deux événements.
+		\begin{description}
+			\item[usagers\_monte\_prioritaire] est l'événement qui représente le fait qu'un passager prioritaire monte dans le bus.
+			
+			Cet événement ne peut se produire que si le bus est arrêté, qu'au moins un usager prioritaire souhaite monter et que tous les passagers voulant descendre l'ont fait.
+			
+			L'effet de cet événement est de convertir l'usager prioritaire attendant à l'arrêt en passager du bus.\\
+			
+			\item[usagers\_monte\_non\_prioritaire] est l'événement qui représente le fait qu'un passager non prioritaire monte dans le bus.
+			
+			Cet événement ne peut se produire que si le bus est arrêté, qu'au moins un usager non prioritaire souhaite monter, que tous les passagers voulant descendre l'ont fait et que tous les passagers prioritaires sont montés.
+			
+			L'effet de cet événement est de convertir l'usager non prioritaire attendant à l'arrêt en passager du bus.\\
+		\end{description}
+			
 \end{document}
