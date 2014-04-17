@@ -38,15 +38,15 @@
 <org.eventb.core.action name="(" org.eventb.core.assignment="usagers_a_l_arret ≔ usagers_a_l_arret ∪ {u}" org.eventb.core.label="act1"/>
 <org.eventb.core.parameter name=")" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="u"/>
 </org.eventb.core.event>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="/" org.eventb.core.identifier="usagers_a_l_arret"/>
-<org.eventb.core.invariant name="0" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers_a_l_arret ⊆ Usagers "/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="passagers"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="bus_roule"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="/" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="usagers_a_l_arret"/>
+<org.eventb.core.invariant name="0" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers_a_l_arret ⊆ Usagers "/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="passagers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="bus_roule"/>
 <org.eventb.core.invariant name="9" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="inv2" org.eventb.core.predicate="passagers ⊆ Usagers ∧ card(passagers) ≤ BusCapacity"/>
 <org.eventb.core.invariant name="2" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv3" org.eventb.core.predicate="bus_roule ∈ BOOL"/>
 <org.eventb.core.invariant name=":" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="inv4" org.eventb.core.predicate="card(passagers) ≤ BusCapacity"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="passagers_descendre"/>
-<org.eventb.core.invariant name="7" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv5" org.eventb.core.predicate="passagers_descendre ⊆ passagers"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="passagers_descendre"/>
+<org.eventb.core.invariant name="7" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="inv5" org.eventb.core.predicate="passagers_descendre ⊆ passagers"/>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passager_veut_desc">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = TRUE"/>
 <org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ passagers ∖ passagers_descendre"/>
