@@ -9,7 +9,7 @@
 <org.eventb.core.seesContext name="(" org.eventb.core.target="ContextUsagers"/>
 <org.eventb.core.event ch.ethz.eventb.decomposition.external="true" ch.ethz.eventb.qualprob.probabilistic="false" name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="bus_arrive">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = TRUE"/>
-<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="(card(passagers) = BusCapacity ∧ passagers_descendre ≠ ∅ ) ∨ ((card(passagers) &lt; BusCapacity) ∧ (passagers_descendre ∪ usagers_a_l_arret) ≠ ∅) "/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="passagers_descendre ≠ ∅  ∨ ((card(passagers) &lt; BusCapacity) ∧ usagers_a_l_arret ≠ ∅) "/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="bus_roule ≔ FALSE" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="bus_repart">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="BusCapacity" org.eventb.core.type="ℤ"/>
@@ -76,9 +76,9 @@
 <org.eventb.core.poPredicateSet name="EVTIDENTusagers_a_l_arret_non_prioritairg" org.eventb.core.parentSet="/Projet/MachineBus2.bpo|org.eventb.core.poFile#MachineBus2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="bus_roule'" org.eventb.core.type="BOOL"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPusagers_a_l_arret_non_prioritairg" org.eventb.core.parentSet="/Projet/MachineBus2.bpo|org.eventb.core.poFile#MachineBus2|org.eventb.core.poPredicateSet#EVTIDENTusagers_a_l_arret_non_prioritairg" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPusagers_a_l_arret_non_prioritairg" org.eventb.core.parentSet="/Projet/MachineBus2.bpo|org.eventb.core.poFile#MachineBus2|org.eventb.core.poPredicateSet#EVTIDENTusagers_a_l_arret_non_prioritairg" org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bus_roule=TRUE" org.eventb.core.source="/Projet/MachineBus1.bum|org.eventb.core.machineFile#MachineBus1|org.eventb.core.event#:|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(card(passagers)=BusCapacity∧passagers_descendre≠(∅ ⦂ ℙ(Usagers)))∨(card(passagers)&lt;BusCapacity∧passagers_descendre∪usagers_a_l_arret_prioritaire∪usagers_a_l_arret_non_prioritaire≠(∅ ⦂ ℙ(Usagers)))" org.eventb.core.source="/Projet/MachineBus1.bum|org.eventb.core.machineFile#MachineBus1|org.eventb.core.event#:|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="passagers_descendre≠(∅ ⦂ ℙ(Usagers))∨(card(passagers)&lt;BusCapacity∧usagers_a_l_arret_prioritaire∪usagers_a_l_arret_non_prioritaire≠(∅ ⦂ ℙ(Usagers)))" org.eventb.core.source="/Projet/MachineBus1.bum|org.eventb.core.machineFile#MachineBus1|org.eventb.core.event#:|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTusagers_a_l_arret_non_prioritairh" org.eventb.core.parentSet="/Projet/MachineBus2.bpo|org.eventb.core.poFile#MachineBus2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="bus_roule'" org.eventb.core.type="BOOL"/>
