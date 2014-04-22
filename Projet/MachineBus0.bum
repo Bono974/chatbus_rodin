@@ -20,9 +20,10 @@
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passager_desc">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = FALSE"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="passagers_descendre ≔ passagers_descendre ∖ {p}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="passagers ≔ passagers ∖ {p}" org.eventb.core.label="act1"/>
 <org.eventb.core.parameter name="*" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="p"/>
 <org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ passagers_descendre"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="passagers_descendre ≔ passagers_descendre ∖ {p}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="usager_monte">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = FALSE"/>
