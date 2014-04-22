@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="BusCapacity" org.eventb.core.type="ℤ"/>
@@ -73,20 +73,11 @@
 <org.eventb.core.poIdentifier name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPpassagers_descendrf" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTpassagers_descendrf" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poSequent name="bus_arrive/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTHYPpassagers_descendrg'"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passagers_descendre≠(∅ ⦂ ℙ(Usagers))∨finite(passagers)" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#)|org.eventb.core.guard#("/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#)|org.eventb.core.guard#("/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTHYPpassagers_descendrg'"/>
-</org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTpassagers_descendrg" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="bus_roule'" org.eventb.core.type="BOOL"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPpassagers_descendrg'" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTpassagers_descendrg" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpassagers_descendrg" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTpassagers_descendrg" org.eventb.core.poStamp="6">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bus_roule=TRUE" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#)|org.eventb.core.guard#'"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpassagers_descendrg" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTHYPpassagers_descendrg'" org.eventb.core.poStamp="5">
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="passagers_descendre≠(∅ ⦂ ℙ(Usagers))∨(card(passagers)&lt;BusCapacity∧usagers_a_l_arret≠(∅ ⦂ ℙ(Usagers)))" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#)|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="bus_repart/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTHYPpassagers_descendrh("/>
