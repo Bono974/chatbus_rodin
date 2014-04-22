@@ -112,13 +112,13 @@
 	\subsection{Les événements}
 		On retrouve dans ce raffinement la plupart des événements de la machine d'origine, dans lesquels l'ensemble \textbf{usagers\_a\_l\_arret} a été remplacé par l'union des ensembles \textbf{usagers\_a\_l\_arret\_prioritaire} et \textbf{usagers\_a\_l\_arret\_non\_prioritaire}.\\
 		
-		L'événement \textbf{usager\_arrive} a été décomposé en deux événements, afin de gérer les priorités.
+		L'événement \textbf{usager\_arrive} a été décomposé en deux événements, afin de gérer les priorités :
 		\begin{description}
 			\item[usagers\_arrive\_prioritaire] est l'événement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
 			Cet événement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
 			
-			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.\\
+			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.
 			
 			\item[usagers\_monte\_non\_prioritaire] est l'événement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
@@ -127,7 +127,9 @@
 			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers non prioritaires souhaitant monter.\\
 		\end{description}
 		
-		De même, afin de gérer les priorités, l'événement \textbf{usager\_monte} a été décomposé en deux événements.
+\newpage
+		De même, afin de gérer les priorités, l'événement \textbf{usager\_monte} a été décomposé en deux événements:
+		
 		\begin{description}
 			\item[usagers\_monte\_prioritaire] est l'événement qui représente le fait qu'un passager prioritaire monte dans le bus.
 			
@@ -141,5 +143,15 @@
 			
 			L'effet de cet événement est de convertir l'usager non prioritaire attendant à l'arrêt en passager du bus.\\
 		\end{description}
-			
+
+\subsection{Dead Lock Free}
+	. 
+	
+	
+	
+	
+	
+\section{MachineBus2}	
+		
+		
 \end{document}
