@@ -1,4 +1,4 @@
-﻿\documentclass[a4paper,titlepage]{report}
+\documentclass[a4paper,titlepage]{report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
@@ -42,7 +42,9 @@
 % === Contenu =======================================================
 \markboth{}{}
 \section{Introduction}
-	
+	Dans le cadre de l'unité d'enseignement Conception Formelle du Master Informatique Génie Logiciel de l'université de Bordeaux, il nous a été proposé de formaliser le fonctionnement d'un bus arrivant à un arrêt.
+
+
 
 \section{ContextUsagers}
 	Nous avons défini un contexte usagers, afin de représenter l'ensemble fini des usagers et la capacité du bus.\\
@@ -63,13 +65,14 @@
 		\begin{description}
 			\item[bus\_arrive] est l'événement qui représente le fait que le bus se stoppe à un arrêt.
 			
-			Cet événement peut se produire uniquement si le bus roule. De plus, afin de ne pas s'arrêter pour rien, on s'assure que des usagers souhaitent monter ou que des passagers veulent descendre et enfin, qu'il y a de la place dans le bus. Ainsi lorsque des usagers attendent le bus à un arrêt, si celui-ci est plein et qu’aucun passager ne souhaite descende, il ne s'arrêtera pas.
+			Cet événement peut se produire uniquement si le bus roule. 
+			%De plus, afin de ne pas s’arrêter pour rien, on s’assure que des usagers souhaitent monter ou que des passagers veulent descendre et enfin, qu’il y a de la place dans le bus. Ainsi lorsque des usagers attendent le bus à un arrêt, si celui-ci est plein et qu’aucun passager ne souhaite descende, il ne s’arrêtera pas.
 			
 			L'effet de l'événement est simplement d'arrêter le bus.\\
 		
 			\item[bus\_repart] est l'événement qui représente le fait que le bus repart d'un arrêt.
 			
-			Cet événement peut se produire uniquement si le bus était arrêté. De plus, le bus ne doit repartir qu'une fois que tous les passagers souhaitant descendre l'ont fait et que les usagers attendant à l'arrêt soient tous montés ou que le bus soit plein.
+			Cet événement peut se produire uniquement si le bus est arrêté. De plus, le bus ne doit repartir qu'une fois que tous les passagers souhaitant descendre l'ont fait et que les usagers attendant à l'arrêt soient tous montés ou que le bus soit plein.
 			
 			L'effet de l'événement est simplement de faire redémarrer le bus.\\
 			
@@ -83,19 +86,19 @@
 			
 			Cet événement ne peut se produire que si le bus est arrêté, qu'au moins un usager souhaite monter et que tous les passagers voulant descendre l'ont fait.
 			
-			L'effet de cet événement est de convertir l'usager attendant à l'arrêt en passager du bus.\\
-			
+			L'effet de cet événement est de déplacer l'usager de l'ensemble des usagers attendant à l'arrêt vers l'ensemble représentant les passagers du bus.\\
+		
 			\item[usager\_arrive] est l'événement représentant un usager arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
 			Cet événement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni à un arrêt, ni déjà passager du bus.
 			
 			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers souhaitant monter.\\
 			
-			\item[passager\_veut\_desc] est l'événement qui représente le fait qu'un passager du bus veuille descendre au prochain arrêt.
+			\item[passager\_veut\_desc] est l'évènement qui représente le fait qu'un passager du bus veuille descendre au prochain arrêt.
 			
-			Cet événement peut se produire uniquement si le bus roule et qu'il reste des passagers n'ayant pas déjà décidé de descendre.
+			Cet évènement peut se produire uniquement si le bus roule et qu'il reste des passagers n'ayant pas déjà décidé de descendre.
 			
-			L'effet de l'événement est d'ajouter le passager à l'ensemble des passagers souhaitant descendre.\\
+			L'effet de l'évènement est d'ajouter le passager à l'ensemble des passagers souhaitant descendre.\\
 		\end{description}
 		
 \section{MachineBus1}
@@ -109,49 +112,50 @@
 			\item[usagers\_a\_l\_arret\_non\_prioritaire], qui représente la partition des usagers non prioritaires attendant au prochain arrêt.\\
 		\end{description}
 				
-	\subsection{Les événements}
-		On retrouve dans ce raffinement la plupart des événements de la machine d'origine, dans lesquels l'ensemble \textbf{usagers\_a\_l\_arret} a été remplacé par l'union des ensembles \textbf{usagers\_a\_l\_arret\_prioritaire} et \textbf{usagers\_a\_l\_arret\_non\_prioritaire}.\\
+	\subsection{Les évènements}
+		On retrouve dans ce raffinement la plupart des évènements de la machine d'origine, dans lesquels l'ensemble \textbf{usagers\_a\_l\_arret} a été remplacé par l'union des ensembles \textbf{usagers\_a\_l\_arret\_prioritaire} et \textbf{usagers\_a\_l\_arret\_non\_prioritaire}.\\
 		
-		L'événement \textbf{usager\_arrive} a été décomposé en deux événements, afin de gérer les priorités :
+		L'évènement \textbf{usager\_arrive} a été décomposé en deux évènements, afin de gérer les priorités :
 		\begin{description}
-			\item[usagers\_arrive\_prioritaire] est l'événement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			\item[usagers\_arrive\_prioritaire] est l'évènement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
-			Cet événement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
+			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
 			
-			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.
+			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.
 			
-			\item[usagers\_monte\_non\_prioritaire] est l'événement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			\item[usagers\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
-			Cet événement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
+			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
 			
-			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers non prioritaires souhaitant monter.\\
+			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers non prioritaires souhaitant monter.\\
 		\end{description}
 		
-\newpage
-		De même, afin de gérer les priorités, l'événement \textbf{usager\_monte} a été décomposé en deux événements:
+
+		De même, afin de gérer les priorités, l'évènement \textbf{usager\_monte} a été décomposé en deux évènements:
 		
 		\begin{description}
-			\item[usagers\_monte\_prioritaire] est l'événement qui représente le fait qu'un passager prioritaire monte dans le bus.
+			\item[usagers\_monte\_prioritaire] est l'évènement qui représente le fait qu'un passager prioritaire monte dans le bus.
 			
-			Cet événement ne peut se produire que si le bus est arrêté, qu'au moins un usager prioritaire souhaite monter et que tous les passagers voulant descendre l'ont fait.
+			Cet évènement ne peut se produire que si le bus est arrêté, qu'au moins un usager prioritaire souhaite monter et que tous les passagers voulant descendre l'ont fait.
 			
-			L'effet de cet événement est de convertir l'usager prioritaire attendant à l'arrêt en passager du bus.\\
+			L'effet de cet évènement est de convertir l'usager prioritaire attendant à l'arrêt en passager du bus.\\
 			
-			\item[usagers\_monte\_non\_prioritaire] est l'événement qui représente le fait qu'un passager non prioritaire monte dans le bus.
+			\item[usagers\_monte\_non\_prioritaire] est l'évènement qui représente le fait qu'un passager non prioritaire monte dans le bus.
 			
-			Cet événement ne peut se produire que si le bus est arrêté, qu'au moins un usager non prioritaire souhaite monter, que tous les passagers voulant descendre l'ont fait et que tous les passagers prioritaires sont montés.
+			Cet évènement ne peut se produire que si le bus est arrêté, qu'au moins un usager non prioritaire souhaite monter, que tous les passagers voulant descendre l'ont fait et que tous les passagers prioritaires sont montés.
 			
-			L'effet de cet événement est de convertir l'usager non prioritaire attendant à l'arrêt en passager du bus.\\
+			L'effet de cet évènement est de convertir l'usager non prioritaire attendant à l'arrêt en passager du bus.\\
 		\end{description}
 
-\subsection{Dead Lock Free}
-	. 
-	
-	
+\subsection{DeadLock Freeness}
+	La conjonction de l'ensemble des gardes étant prouvée, la machine \textbf{MachineBus1} ne se bloque jamais.
 	
 	
 	
 \section{MachineBus2}	
-		
+	La \textbf{MachineBus2} est le second raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la notion de file sur les usagers non prioritaires.\\
+	
+	
+	
 		
 \end{document}
