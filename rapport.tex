@@ -1,4 +1,4 @@
-\documentclass[a4paper,titlepage]{report}
+﻿\documentclass[a4paper,titlepage]{report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
@@ -52,9 +52,9 @@
 	
 	\subsection{Les ensembles}
 		\begin{description}
-			\item[usagers\_a\_l\_arret] est un sous ensemble des usagers représentant les usagers attendant au prochain arrêt.\\
-			\item[passagers] est un sous ensemble des usagers représentant les passagers du bus. Le cardinal de passager ne peut donc pas dépasser la capacité du bus.\\
-			\item[passagers\_descendre] est un sous ensemble des passagers représentant les passagers souhaitant descendre du bus au prochain arrêt.\\
+			\item[usagers\_a\_l\_arret] est un sous-ensemble des usagers représentant les usagers attendant au prochain arrêt.\\
+			\item[passagers] est un sous-ensemble des usagers représentant les passagers du bus. Le cardinal de passager ne peut donc pas dépasser la capacité du bus.\\
+			\item[passagers\_descendre] est un sous-ensemble des passagers représentant les passagers souhaitant descendre du bus au prochain arrêt.\\
 		\end{description}
 		
 	\subsection{Les événements}
@@ -63,7 +63,7 @@
 		\begin{description}
 			\item[bus\_arrive] est l'événement qui représente le fait que le bus se stoppe à un arrêt.
 			
-			Cet événement peut se produire uniquement si le bus roule. De plus, afin de ne pas s'arrêter pour rien, on s'assure que des usagers souhaitent monter ou que des passagers veulent descendre et enfin, qu'il y a de la place dans le bus. Ainsi lorsque des usagers attendent le bus à un arrêt, si celui-ci est plein et que aucun passager ne souhaite descende, il ne s'arrêtera pas.
+			Cet événement peut se produire uniquement si le bus roule. De plus, afin de ne pas s'arrêter pour rien, on s'assure que des usagers souhaitent monter ou que des passagers veulent descendre et enfin, qu'il y a de la place dans le bus. Ainsi lorsque des usagers attendent le bus à un arrêt, si celui-ci est plein et qu’aucun passager ne souhaite descende, il ne s'arrêtera pas.
 			
 			L'effet de l'événement est simplement d'arrêter le bus.\\
 		
