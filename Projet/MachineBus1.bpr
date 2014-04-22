@@ -1794,6 +1794,8 @@
 <org.eventb.core.prIdent name="bus_roule" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="passagers" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.prIdent name="passagers_descendre" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret_non_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.prIdent name="usagers_a_l_arret_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="passagers⊆Usagers∧⊤">
 <org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
@@ -1801,37 +1803,30 @@
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="passagers⊆Usagers⇒⊤">
 <org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers_a_l_arret_prioritaire∩usagers_a_l_arret_non_prioritaire=(∅ ⦂ ℙ(Usagers))">
-<org.eventb.core.prIdent name="usagers_a_l_arret_non_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
-<org.eventb.core.prIdent name="usagers_a_l_arret_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers_a_l_arret_prioritaire∩usagers_a_l_arret_non_prioritaire=(∅ ⦂ ℙ(Usagers))"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="passagers⊆Usagers∧card(passagers)≤BusCapacity">
 <org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers_a_l_arret=usagers_a_l_arret_prioritaire∪usagers_a_l_arret_non_prioritaire">
 <org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
-<org.eventb.core.prIdent name="usagers_a_l_arret_non_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
-<org.eventb.core.prIdent name="usagers_a_l_arret_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="passagers⊆Usagers⇒finite(passagers)">
 <org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="bus_roule=TRUE⇒⊤∧((card(passagers)=BusCapacity∧passagers_descendre≠(∅ ⦂ ℙ(Usagers)))∨⊤)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="bus_roule=TRUE⇒finite(passagers)∧((card(passagers)=BusCapacity∧passagers_descendre≠(∅ ⦂ ℙ(Usagers)))∨finite(passagers))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="bus_roule=TRUE∨((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))⇒usagers_a_l_arret_prioritaire∪usagers_a_l_arret_non_prioritaire=(∅ ⦂ ℙ(Usagers))∨⊤)∧((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))∧(usagers_a_l_arret_prioritaire∪usagers_a_l_arret_non_prioritaire=(∅ ⦂ ℙ(Usagers))∨card(passagers)=BusCapacity))∨(bus_roule=FALSE∧(∃p⦂Usagers·p∈passagers_descendre))∨((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))⇒(∀prio⦂Usagers·prio∈usagers_a_l_arret_prioritaire⇒⊤))∧((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))∧(∃prio⦂Usagers·prio∈usagers_a_l_arret_prioritaire∧card(passagers)&lt;BusCapacity))∨(bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))⇒(∀non_prio⦂Usagers·non_prio∈usagers_a_l_arret_non_prioritaire⇒⊤))))))"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passagers)≤BusCapacity"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="passagers⊆Usagers">
 <org.eventb.core.prIdent name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="bus_roule=TRUE∨((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))⇒usagers_a_l_arret_prioritaire∪usagers_a_l_arret_non_prioritaire=(∅ ⦂ ℙ(Usagers))∨finite(passagers))∧((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))∧(usagers_a_l_arret_prioritaire∪usagers_a_l_arret_non_prioritaire=(∅ ⦂ ℙ(Usagers))∨card(passagers)=BusCapacity))∨(bus_roule=FALSE∧(∃p⦂Usagers·p∈passagers_descendre))∨((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))⇒(∀prio⦂Usagers·prio∈usagers_a_l_arret_prioritaire⇒finite(passagers)))∧((bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))∧(∃prio⦂Usagers·prio∈usagers_a_l_arret_prioritaire∧card(passagers)&lt;BusCapacity))∨(bus_roule=FALSE∧passagers_descendre=(∅ ⦂ ℙ(Usagers))⇒(∀non_prio⦂Usagers·non_prio∈usagers_a_l_arret_non_prioritaire⇒finite(passagers)))))))"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(usagers_a_l_arret,usagers_a_l_arret_prioritaire,usagers_a_l_arret_non_prioritaire)">
 <org.eventb.core.prIdent name="usagers_a_l_arret" org.eventb.core.type="ℙ(Usagers)"/>
-<org.eventb.core.prIdent name="usagers_a_l_arret_non_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
-<org.eventb.core.prIdent name="usagers_a_l_arret_prioritaire" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(passagers)"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/dlf1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
