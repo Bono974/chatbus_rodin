@@ -47,7 +47,7 @@
 
 
 \section{ContextUsagers}
-	Nous avons défini un contexte usagers, afin de représenter l'ensemble fini des usagers et la capacité du bus.\\
+	Nous avons défini un contexte \textbf{Usagers}, afin de représenter l'ensemble fini des usagers et la constante \textbf{BusCapacity}, représentant la capacité du bus.\\
 
 \section{MachineBus0}
 	La \textbf{MachineBus0} représente notre machine de base. Celle-ci assure la cohérence de l'enchaînement des événements et le respect de la règle de civisme proposée par le sujet. Ainsi, les usagers montent dans le bus qu'après que tous les passagers désirant descendre l'aient fait.\\
@@ -119,13 +119,13 @@
 		\begin{description}
 			\item[usagers\_arrive\_prioritaire] est l'évènement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
-			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
+			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
 			
 			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.
 			
 			\item[usagers\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
-			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt (prioritaire ou non), ni déjà passager du bus.
+			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
 			
 			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers non prioritaires souhaitant monter.\\
 		\end{description}
@@ -138,13 +138,13 @@
 			
 			Cet évènement ne peut se produire que si le bus est arrêté, qu'au moins un usager prioritaire souhaite monter et que tous les passagers voulant descendre l'ont fait.
 			
-			L'effet de cet évènement est de convertir l'usager prioritaire attendant à l'arrêt en passager du bus.\\
+			L'effet de cet évènement est de déplacer l'usager prioritaire attendant à l'arrêt vers l'ensemble des passagers du bus.\\
 			
 			\item[usagers\_monte\_non\_prioritaire] est l'évènement qui représente le fait qu'un passager non prioritaire monte dans le bus.
 			
 			Cet évènement ne peut se produire que si le bus est arrêté, qu'au moins un usager non prioritaire souhaite monter, que tous les passagers voulant descendre l'ont fait et que tous les passagers prioritaires sont montés.
 			
-			L'effet de cet évènement est de convertir l'usager non prioritaire attendant à l'arrêt en passager du bus.\\
+			L'effet de cet évènement est de déplacer l'usager non prioritaire attendant à l'arrêt vers l'ensemble des passagers du bus.\\
 		\end{description}
 
 \subsection{DeadLock Freeness}
