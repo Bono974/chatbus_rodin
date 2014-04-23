@@ -148,8 +148,9 @@
 		\end{description}
 
 \subsection{DeadLock Freeness}
-	La conjonction de l'ensemble des gardes étant prouvée, la machine \textbf{MachineBus1} ne se bloque jamais.
+	Afin de prouver que notre premier raffinement n'a pas de situations	de blocages, nous avons vérifié que le modèle n'a pas de deadlocks évidentes à l'aide du plug-in "ProB". Vous pouvez voir nos résultats sur l'image ci-dessous. Afin de garantir ce résultat, nous avons rajouté un théorème ou DeadLock Freeness. Nous avons réussi à le prouver, ce qui justifie que cette machine n'a aucun blocage. \\
 	
+	\includegraphics[width=\textwidth]{checkMachineBus1.png}
 	
 	
 \section{MachineBus2}	

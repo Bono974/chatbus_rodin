@@ -6,18 +6,16 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="B" org.eventb.core.identifier="usagers_a_l_arret_non_prioritaire"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="passagers"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="bus_roule"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="passagers_descendre"/>
 <org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="." org.eventb.core.assignment="simulation_en_cours ≔ TRUE" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="bus_roule ≔ TRUE" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="passagers_descendre ≔ ∅" org.eventb.core.label="act3"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="passagers :∣ passagers' ⊆ Usagers ∧ card(passagers') ≤ BusCapacity" org.eventb.core.label="act4"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="usagers_a_l_arret_prioritaire ≔ ∅" org.eventb.core.label="act5"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="usagers_a_l_arret_non_prioritaire ≔ ∅" org.eventb.core.label="act6"/>
 </org.eventb.core.event>
-<org.eventb.core.event ch.ethz.eventb.decomposition.external="true" ch.ethz.eventb.qualprob.probabilistic="false" name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="bus_arrive">
+<org.eventb.core.event ch.ethz.eventb.decomposition.external="true" ch.ethz.eventb.qualprob.probabilistic="false" name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="bus_arrive">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="bus_arrive"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="bus_roule ≔ FALSE" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.comment="passagers_descendre ≠ ∅ ∨ ((card(passagers) &lt; BusCapacity) ∧ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire) ≠ ∅) " org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = TRUE"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="bus_repart">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="bus_repart"/>
@@ -25,6 +23,7 @@
 <org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="passagers_descendre = ∅"/>
 <org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire = ∅ ∨ card(passagers) = BusCapacity "/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="bus_roule ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="simulation_en_cours = TRUE"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="passager_desc">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="passager_desc"/>
@@ -39,6 +38,7 @@
 <org.eventb.core.action name="," org.eventb.core.assignment="passagers ≔ passagers ∪ {prio}" org.eventb.core.label="act2"/>
 <org.eventb.core.guard name="-" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="card(passagers) &lt; BusCapacity"/>
 <org.eventb.core.witness name="." org.eventb.core.label="p" org.eventb.core.predicate="p = prio"/>
+<org.eventb.core.guard name="/" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd5" org.eventb.core.predicate="simulation_en_cours = TRUE"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="usager_monte_non_prioritaire">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = FALSE"/>
@@ -51,6 +51,7 @@
 <org.eventb.core.refinesEvent name="." org.eventb.core.target="usager_monte"/>
 <org.eventb.core.parameter name="/" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="non_prio"/>
 <org.eventb.core.witness name="0" org.eventb.core.label="p" org.eventb.core.predicate="p = non_prio"/>
+<org.eventb.core.guard name="1" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd6" org.eventb.core.predicate="simulation_en_cours = TRUE"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="usager_arrive_prioritaire">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="usager_arrive"/>
@@ -58,6 +59,7 @@
 <org.eventb.core.action name="(" org.eventb.core.assignment="usagers_a_l_arret_prioritaire ≔ usagers_a_l_arret_prioritaire ∪ {prio}" org.eventb.core.label="act1"/>
 <org.eventb.core.parameter name=")" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="prio"/>
 <org.eventb.core.witness name="*" org.eventb.core.label="u" org.eventb.core.predicate="u = prio"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="simulation_en_cours = TRUE"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="usager_arrive_non_prioritaire">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="usager_arrive"/>
@@ -65,10 +67,12 @@
 <org.eventb.core.action name="(" org.eventb.core.assignment="usagers_a_l_arret_non_prioritaire ≔ usagers_a_l_arret_non_prioritaire ∪ {non_prio}" org.eventb.core.label="act1"/>
 <org.eventb.core.parameter name=")" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="non_prio"/>
 <org.eventb.core.witness name="*" org.eventb.core.label="u" org.eventb.core.predicate="u = non_prio"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="simulation_en_cours = TRUE"/>
 </org.eventb.core.event>
 <org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="passager_veut_desc">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="passager_veut_desc"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name="C" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="inv1" org.eventb.core.predicate="partition(usagers_a_l_arret, usagers_a_l_arret_prioritaire, usagers_a_l_arret_non_prioritaire)"/>
-<org.eventb.core.invariant name="evt4" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="DLF" org.eventb.core.predicate="(bus_roule = TRUE) ∨ &#10;(bus_roule = FALSE ∧ passagers_descendre = ∅ ∧ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire = ∅ ∨ card(passagers) = BusCapacity)) ∨&#10;(bus_roule = FALSE ∧ ∃p·p ∈ passagers_descendre) ∨&#10;(bus_roule = FALSE ∧ passagers_descendre = ∅ ∧ ∃prio·prio ∈ usagers_a_l_arret_prioritaire ∧ card(passagers) &lt; BusCapacity) ∨&#10;(bus_roule = FALSE ∧ passagers_descendre = ∅ ∧ ∃non_prio·non_prio ∈ usagers_a_l_arret_non_prioritaire ∧ card(passagers) &lt; BusCapacity ∧ usagers_a_l_arret_prioritaire = ∅) ∨&#10;(∃prio·prio ∈ Usagers ∖ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire ∪ passagers)) ∨&#10;(∃non_prio·non_prio ∈ Usagers ∖ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire ∪ passagers)) ∨&#10;(bus_roule = TRUE ∧ ∃p·p∈passagers ∖ passagers_descendre)" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="evt4" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="DLF" org.eventb.core.predicate="(simulation_en_cours = TRUE ∧ bus_roule = TRUE) ∨ &#10;(simulation_en_cours = TRUE ∧ bus_roule = FALSE ∧ passagers_descendre = ∅ ∧ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire = ∅ ∨ card(passagers) = BusCapacity)) ∨&#10;(simulation_en_cours = TRUE ∧ bus_roule = FALSE ∧ ∃p·p ∈ passagers_descendre) ∨&#10;(simulation_en_cours = TRUE ∧ bus_roule = FALSE ∧ passagers_descendre = ∅ ∧ ∃prio·prio ∈ usagers_a_l_arret_prioritaire ∧ card(passagers) &lt; BusCapacity) ∨&#10;(simulation_en_cours = TRUE ∧ bus_roule = FALSE ∧ passagers_descendre = ∅ ∧ ∃non_prio·non_prio ∈ usagers_a_l_arret_non_prioritaire ∧ card(passagers) &lt; BusCapacity ∧ usagers_a_l_arret_prioritaire = ∅) ∨&#10;(simulation_en_cours = TRUE ∧ ∃prio·prio ∈ Usagers ∖ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire ∪ passagers)) ∨&#10;(simulation_en_cours = TRUE ∧ ∃non_prio·non_prio ∈ Usagers ∖ (usagers_a_l_arret_prioritaire ∪ usagers_a_l_arret_non_prioritaire ∪ passagers)) ∨&#10;(simulation_en_cours = TRUE ∧ bus_roule = TRUE ∧ ∃p·p∈passagers ∖ passagers_descendre)" org.eventb.core.theorem="true"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evt5" org.eventb.core.identifier="simulation_en_cours"/>
 </org.eventb.core.machineFile>
