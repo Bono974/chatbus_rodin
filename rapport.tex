@@ -66,7 +66,6 @@
 			\item[bus\_arrive] est l'événement qui représente le fait que le bus se stoppe à un arrêt.
 			
 			Cet événement peut se produire uniquement si le bus roule. 
-			%De plus, afin de ne pas s’arrêter pour rien, on s’assure que des usagers souhaitent monter ou que des passagers veulent descendre et enfin, qu’il y a de la place dans le bus. Ainsi lorsque des usagers attendent le bus à un arrêt, si celui-ci est plein et qu’aucun passager ne souhaite descende, il ne s’arrêtera pas.
 			
 			L'effet de l'événement est simplement d'arrêter le bus.\\
 		
@@ -107,6 +106,9 @@
 
 	\subsection{Le variant}
 		Maintenant que notre machine se termine nous avons réussi à mettre en place un variant. Pour ce faire, nous avons rajouté un contexte qui permet de convertir un booléen en entier qui va nous servir dans notre variable. Ce contexte s'appelle \textbf{BoolToInt}. Nous avons choisis comme variant le nombre de passagers voulant descendre, auquel on ajoute un entier représentant l'état de la simulation (0 pour terminée, sinon 1). Nous avons rajouté cet entier afin que le variant ait la valeur nulle dès que la simulation est terminée. Dans le cas contraire, le variant aurait eu la valeur nulle avant de repartir de l'arrêt. Nous avons réussi à prouver ce variant, ce qui démontre que notre machine se termine quoi qu'il arrive.
+		
+	\subsection{Cas de l'arrêt du bus}
+		Dans notre première implémentation, nous avions rajouté une garde sur l'évènement \textbf{bus\_arrive} permettant de préciser au bus de ne s'arrêter que lorsque c'est nécessaire. En effet, il ne pouvait s'arrêter que si des passagers voulaient descendre ou si des usagers voulaient monter et que le bus n'était pas remplit. Nous l'avons finalement enlevée car celle-ci compliquait nos preuves et que ce n'est pas demandé dans le sujet. Dorénavant notre bus s'arrête à tout moment.
 	
 \section{MachineBus1}
 	La \textbf{MachineBus1} est le premier raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la gestion d'usagers prioritaires.\\
@@ -166,8 +168,24 @@
 	
 \section{MachineBus2}	
 	La \textbf{MachineBus2} est le second raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la notion de file sur les usagers non prioritaires.\\
-	
-	
+
+	\subsection{Les évènements}
+		On retrouve dans ce raffinement la plupart des évènements de la machine précédente.\\
+		
+		L'évènement \textbf{usager\_arrive} a été décomposé en deux évènements, afin de gérer les priorités :
+		\begin{description}
+			\item[usagers\_arrive\_prioritaire] est l'évènement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			
+			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
+			
+			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.
+			
+			\item[usagers\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			
+			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
+			
+			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers non prioritaires souhaitant monter.\\
+		\end{description}
 	
 		
 \end{document}
