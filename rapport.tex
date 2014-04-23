@@ -11,6 +11,7 @@
 %\usepackage{array}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{amsmath}
 % definition des marges
 \usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=3.5cm]{geometry}
 \usepackage{listingsutf8}
@@ -108,13 +109,13 @@
 		Maintenant que notre machine se termine nous avons réussi à mettre en place un variant. Pour ce faire, nous avons rajouté un contexte qui permet de convertir un booléen en entier qui va nous servir dans notre variable. Ce contexte s'appelle \textbf{BoolToInt}. Nous avons choisis comme variant le nombre de passagers voulant descendre, auquel on ajoute un entier représentant l'état de la simulation (0 pour terminée, sinon 1). Nous avons rajouté cet entier afin que le variant ait la valeur nulle dès que la simulation est terminée. Dans le cas contraire, le variant aurait eu la valeur nulle avant de repartir de l'arrêt. Nous avons réussi à prouver ce variant, ce qui démontre que notre machine se termine quoi qu'il arrive.
 		
 	\subsection{Cas de l'arrêt du bus}
-		Dans notre première implémentation, nous avions rajouté une garde sur l'évènement \textbf{bus\_arrive} permettant de préciser au bus de ne s'arrêter que lorsque c'est nécessaire. En effet, il ne pouvait s'arrêter que si des passagers voulaient descendre ou si des usagers voulaient monter et que le bus n'était pas remplit. Nous l'avons finalement enlevée car celle-ci compliquait nos preuves et que ce n'est pas demandé dans le sujet. Dorénavant notre bus s'arrête à tout moment.
+		Dans notre première implémentation, nous avions rajouté une garde sur l'évènement \textbf{bus\_arrive} permettant de préciser au bus de ne s'arrêter que lorsque c'est nécessaire. En effet, il ne pouvait s'arrêter que si des passagers voulaient descendre ou si des usagers voulaient monter et que le bus n'était pas remplit. On peut trouver dans l'évènement cette garde en commentaire. Nous l'avons finalement enlevée car celle-ci compliquait nos preuves et que ce n'est pas demandé dans le sujet. Dorénavant notre bus s'arrête à tout moment.
 	
 \section{MachineBus1}
 	La \textbf{MachineBus1} est le premier raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la gestion d'usagers prioritaires.\\
 		
 	\subsection{Les ensembles}
-		Dans cette machine, les ensembles décrits précédemment n'ont pas été modifiés, excepté \textbf{usagers\_à\_l\_arrêt}, qui se décompose à présent en deux ensembles afin de gérer des usagers prioritaires :
+		Dans cette machine, les ensembles décrits précédemment n'ont pas été modifiés, excepté \textbf{usagers\_a\_l\_arret}, qui se décompose à présent en deux ensembles afin de gérer des usagers prioritaires :
 		 	
 		\begin{description}
 			\item[usagers\_a\_l\_arret\_prioritaire], qui représente la partition des usagers prioritaires attendant au prochain arrêt.
@@ -126,13 +127,13 @@
 		
 		L'évènement \textbf{usager\_arrive} a été décomposé en deux évènements, afin de gérer les priorités :
 		\begin{description}
-			\item[usagers\_arrive\_prioritaire] est l'évènement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			\item[usager\_arrive\_prioritaire] est l'évènement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
 			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
 			
 			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.
 			
-			\item[usagers\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			\item[usager\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
 			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
 			
@@ -143,13 +144,13 @@
 		De même, afin de gérer les priorités, l'évènement \textbf{usager\_monte} a été décomposé en deux évènements:
 		
 		\begin{description}
-			\item[usagers\_monte\_prioritaire] est l'évènement qui représente le fait qu'un passager prioritaire monte dans le bus.
+			\item[usager\_monte\_prioritaire] est l'évènement qui représente le fait qu'un passager prioritaire monte dans le bus.
 			
 			Cet évènement ne peut se produire que si le bus est arrêté, qu'au moins un usager prioritaire souhaite monter et que tous les passagers voulant descendre l'ont fait.
 			
 			L'effet de cet évènement est de déplacer l'usager prioritaire attendant à l'arrêt vers l'ensemble des passagers du bus.\\
 			
-			\item[usagers\_monte\_non\_prioritaire] est l'évènement qui représente le fait qu'un passager non prioritaire monte dans le bus.
+			\item[usager\_monte\_non\_prioritaire] est l'évènement qui représente le fait qu'un passager non prioritaire monte dans le bus.
 			
 			Cet évènement ne peut se produire que si le bus est arrêté, qu'au moins un usager non prioritaire souhaite monter, que tous les passagers voulant descendre l'ont fait et que tous les passagers prioritaires sont montés.
 			
@@ -163,7 +164,7 @@
 \subsection{DeadLock Freeness}
 	Afin de prouver que notre premier raffinement n'a pas de situations	de blocages, nous avons vérifié que le modèle n'a pas de deadlocks évidentes à l'aide du plug-in "ProB". Vous pouvez voir nos résultats sur l'image ci-dessous. Afin de garantir ce résultat, nous avons rajouté un théorème ou DeadLock Freeness. Nous avons réussi à le prouver, ce qui justifie que cette machine n'a aucun blocage. \\
 	
-	\includegraphics[width=\textwidth]{checkMachineBus1.png}
+	\includegraphics[scale=0.8]{checkMachineBus1.png}
 	
 	
 \section{MachineBus2}	
@@ -172,20 +173,18 @@
 	\subsection{Les évènements}
 		On retrouve dans ce raffinement la plupart des évènements de la machine précédente.\\
 		
-		L'évènement \textbf{usager\_arrive} a été décomposé en deux évènements, afin de gérer les priorités :
 		\begin{description}
-			\item[usagers\_arrive\_prioritaire] est l'évènement représentant un usager prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			\item[usager\_monte\_non\_prioritaire] est l'évènement représentant un usager non prioritaire qui monte dans le bus.
+			Cet évènement peut se produire lorsque le bus est à l'arrêt, qu'il n'y a aucun passager voulant descendre, que le bus n'est pas plein, qu'il y a des usagers non prioritaires voulant monter, qu'il n'y a pas d'usagers prioritaires voulant monter et que l'usager voulant monter a la priorité maximale et se trouve à la tête de la file.
+			L'effet de l'évènement est d'ajouter l'usager à la liste des passagers du bus ainsi que de l'enlever de la liste des usagers à l'arrêt.
 			
-			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
-			
-			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers prioritaires souhaitant monter.
-			
-			\item[usagers\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
-			
-			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni en attente à un arrêt, ni déjà passager du bus.
-			
-			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers non prioritaires souhaitant monter.\\
+			\item[usager\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire qui arrive à l'arrêt de bus.
+			Cet évènement peut se produire lorsque l'usager n'est ni est un passager, ni à l'arrêt et qu'il n'est pas dans la file des usagers non prioritaires.
+			L'effet de l'évènement est d'ajouter l'usager à la liste des usagers non prioritaires attendant à l'arrêt ainsi qu'à la liste des priorités.
+
 		\end{description}
-	
+		
+	\subsection{Explication de la file de priorité}
+		Nous avons décidé d'implémenter la file présentée dans les exemples du cours. Nous avons compris son fonctionnement et nous l'avons adaptée à ce projet. Lorsqu'un usager non prioritaire arrive à l'arrêt, il est ajouté à la liste des personnes non prioritaires attendant à l'arrêt, mais nous ... A COMPLETER
 		
 \end{document}
