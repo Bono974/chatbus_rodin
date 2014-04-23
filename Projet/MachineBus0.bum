@@ -13,7 +13,7 @@
 <org.eventb.core.action name=")" org.eventb.core.assignment="bus_roule ≔ FALSE" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="simulation_en_cours = TRUE"/>
 </org.eventb.core.event>
-<org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="bus_repart">
+<org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="*" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="bus_repart">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = FALSE"/>
 <org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="passagers_descendre = ∅"/>
 <org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="usagers_a_l_arret = ∅ ∨ card(passagers) = BusCapacity "/>
@@ -21,7 +21,7 @@
 <org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="simulation_en_cours = TRUE"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="simulation_en_cours ≔ FALSE" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passager_desc">
+<org.eventb.core.event ch.ethz.eventb.qualprob.probabilistic="false" name="+" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="passager_desc">
 <org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="bus_roule = FALSE"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="passagers ≔ passagers ∖ {p}" org.eventb.core.label="act1"/>
 <org.eventb.core.parameter name="*" org.eventb.codegen.ui.parameterTypeAttribute="--unset--" org.eventb.core.identifier="p"/>
@@ -63,4 +63,6 @@
 </org.eventb.core.event>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="&gt;" org.eventb.core.identifier="simulation_en_cours"/>
 <org.eventb.core.invariant name="?" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv6" org.eventb.core.predicate="simulation_en_cours ∈ BOOL"/>
+<org.eventb.core.seesContext name="@" org.eventb.core.target="BoolToInt"/>
+<org.eventb.core.variant name="A" org.eventb.core.expression="card(passagers_descendre) + b2n(simulation_en_cours)"/>
 </org.eventb.core.machineFile>
