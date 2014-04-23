@@ -72,10 +72,14 @@
 		
 			\item[bus\_repart] est l'événement qui représente le fait que le bus repart d'un arrêt.
 			
-			Cet événement peut se produire uniquement si le bus est arrêté. De plus, le bus ne doit repartir qu'une fois que tous les passagers souhaitant descendre l'ont fait et que les usagers attendant à l'arrêt soient tous montés ou que le bus soit plein.
+			Cet évènement peut se produire uniquement si le bus est arrêté. De plus, le bus ne doit repartir qu'une fois que tous les passagers souhaitant descendre l'ont fait et que les usagers attendant à l'arrêt soient tous montés ou que le bus soit plein. \\
 			
-			L'effet de l'événement est simplement de faire redémarrer le bus.\\
+			Dans notre première implémentation, nous avions fait en sorte que le bus puisse s'arrêter puis repartir puis s'arrêter à nouveau dans une boucle infinie. Cela permettait au bus de pouvoir parcourir une multitude d'arrêts, en faisant monter et descendre un certain nombre de passager à chaque fois.\\
 			
+			Dans notre seconde implémentation, afin de ne pas avoir une exécution infinie et ajouter un variant, nous avons décidé que le bus ne pourrait que s'arrêter et repartir une seule fois. De ce fait, l'évènement \textbf{bus\_repart} qui précisait que le bus roule à nouveau, indique maintenant que la simulation se termine. Donc, lorsqu'elle est terminée, il n'est plus possible de faire aucun évènement. Nous obtenons donc une deadlock afin d'obtenir une terminaison.
+			
+
+
 			\item[passager\_desc] est l'événement qui représente le fait qu'un passager descende du bus.
 			
 			Cet événement peut se produire uniquement si le bus est arrêté et qu'il y a au moins un passager qui souhaite descendre.
@@ -100,7 +104,10 @@
 			
 			L'effet de l'évènement est d'ajouter le passager à l'ensemble des passagers souhaitant descendre.\\
 		\end{description}
-		
+
+	\subsection{Le variant}
+		Maintenant que notre machine se termine nous avons réussi à mettre en place un variant. Pour ce faire, nous avons rajouté un contexte qui permet de convertir un booléen en entier qui va nous servir dans notre variable. Ce contexte s'appelle \textbf{BoolToInt}. Nous avons choisis comme variant le nombre de passagers voulant descendre, auquel on ajoute un entier représentant l'état de la simulation (0 pour terminée, sinon 1). Nous avons rajouté cet entier afin que le variant ait la valeur nulle dès que la simulation est terminée. Dans le cas contraire, le variant aurait eu la valeur nulle avant de repartir de l'arrêt. Nous avons réussi à prouver ce variant, ce qui démontre que notre machine se termine quoi qu'il arrive.
+	
 \section{MachineBus1}
 	La \textbf{MachineBus1} est le premier raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la gestion d'usagers prioritaires.\\
 		
@@ -146,6 +153,10 @@
 			
 			L'effet de cet évènement est de déplacer l'usager non prioritaire attendant à l'arrêt vers l'ensemble des passagers du bus.\\
 		\end{description}
+		
+		Nous avons rajouté un dernier évènement permettant à notre simulation de ne pas se terminer. Celui-ci s'appelle \textbf{idle}. Il est appelé en boucle à partir du moment où la simulation se termine ou plus précisément, après l'évènement \textbf{bus\_repart}. Cela nous permet d'ignorer les deadlocks hors simulation. 
+		
+		
 
 \subsection{DeadLock Freeness}
 	Afin de prouver que notre premier raffinement n'a pas de situations	de blocages, nous avons vérifié que le modèle n'a pas de deadlocks évidentes à l'aide du plug-in "ProB". Vous pouvez voir nos résultats sur l'image ci-dessous. Afin de garantir ce résultat, nous avons rajouté un théorème ou DeadLock Freeness. Nous avons réussi à le prouver, ce qui justifie que cette machine n'a aucun blocage. \\
