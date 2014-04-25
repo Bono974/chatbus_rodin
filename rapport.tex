@@ -28,7 +28,7 @@
 		\textsc{Rodin 2014}
 	\end{center}
 }
-\author{Jordan Aupetit, Salmane Bah, Timothée Sollaud \& Bruno Thiaolayel\\
+\author{Jordan Aupetit, Salmane Bah, Timothée Sollaud, Bruno Thiao-Layel\\
 	\\
 	\\ \textsc{Université de Bordeaux}
 }
@@ -176,16 +176,21 @@
 		
 		\begin{description}
 			\item[usager\_monte\_non\_prioritaire] est l'évènement représentant un usager non prioritaire qui monte dans le bus.
-			Cet évènement peut se produire lorsque le bus est à l'arrêt, qu'il n'y a aucun passager voulant descendre, que le bus n'est pas plein, qu'il y a des usagers non prioritaires voulant monter, qu'il n'y a pas d'usagers prioritaires voulant monter et que l'usager voulant monter a la priorité maximale et se trouve à la tête de la file.
+			Cet évènement peut se produire lorsque le bus est à l'arrêt, qu'il n'y a aucun passager voulant descendre, que le bus n'est pas plein, qu'il y a des usagers non prioritaires voulant monter, qu'il n'y a pas d'usagers prioritaires voulant monter et que l'usager voulant monter est le plus ancien usager non prioritaire attendant à l'arrêt.
 			L'effet de l'évènement est d'ajouter l'usager à la liste des passagers du bus, de l'enlever de la liste des usagers à l'arrêt et d'incrémenter l'indice de tête de file \textbf{oldest}.
 			
 			\item[usager\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire qui arrive à l'arrêt de bus.
-			Cet évènement peut se produire lorsque l'usager n'est ni est un passager, ni à l'arrêt et qu'il n'est pas dans la file des usagers non prioritaires.
+			Cet évènement peut se produire lorsque l'usager n'est ni est un passager et qu'il n'est pas dans la file des usagers non prioritaires attendant à l'arrêt.
 			L'effet de l'évènement est d'ajouter l'usager à la liste des usagers non prioritaires attendant à l'arrêt ainsi que d'incrémenter l'indice de fin de file \textbf{newest}.
 
 		\end{description}
 		
 	\subsection{Explication de la file de priorité}
 		Nous avons décidé d'implémenter la liste en FIFO (First In First Out) présentée dans sur le site de M. Casteran. Nous avons compris son fonctionnement et nous l'avons adaptée à ce projet. Lorsqu'un usager non prioritaire arrive à l'arrêt, il est ajouté à la liste des personnes non prioritaires attendant à l'arrêt et l'indice de fin de file, \textbf{newest}, est incrémenté. Nous avons un second indice, \textbf{oldest}, qui nous permet de connaître le premier usager de la file. A chaque fois qu'un de ces usagers monte dans le bus, celui-ci est déplacé de l'ensemble des usagers non prioritaires attendant à l'arrêt vers l'ensemble des passagers du bus. Ensuite, l'indice \textbf{oldest} est incrémenté, afin qu'il pointe toujours sur le plus ancien usager non prioritaire attendant à l'arrêt.
-		
+
+\subsection{DeadLock Freeness}
+	Afin de prouver que notre second raffinement n'a pas de situations de blocages évidentes, nous avons vérifié le modèle à l'aide du plug-in "ProB". Vous pouvez voir nos résultats sur l'image ci-dessous. Nous nous sommes contenté de ces résultats car il n'était pas demandé de réaliser la preuve pour ce raffinement. \\
+	
+	\includegraphics[scale=0.8]{checkMachineBus2.png}
+
 \end{document}
