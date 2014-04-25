@@ -23,7 +23,7 @@
 \renewcommand{\thesection}{\@arabic\c@section}
 \makeatother
 
-\title{Rapport du projet de conception formelle :
+\title{Rapport du projet de conception formelle
 	\begin{center}
 		\textsc{Rodin 2014}
 	\end{center}
@@ -51,7 +51,7 @@
 	Nous avons défini un contexte \textbf{Usagers}, afin de représenter l'ensemble fini des usagers et la constante \textbf{BusCapacity}, représentant la capacité du bus.\\
 
 \section{MachineBus0}
-	La \textbf{MachineBus0} représente notre machine de base. Celle-ci assure la cohérence de l'enchaînement des événements et le respect de la règle de civisme proposée par le sujet. Ainsi, les usagers montent dans le bus qu'après que tous les passagers désirant descendre l'aient fait.\\
+	La \textbf{MachineBus0} représente notre machine de base. Celle-ci assure la cohérence de l'enchaînement des évènements et le respect de la règle de civisme proposée par le sujet. Ainsi, les usagers montent dans le bus qu'après que tous les passagers désirant descendre l'aient fait.\\
 	
 	\subsection{Les ensembles}
 		\begin{description}
@@ -60,43 +60,43 @@
 			\item[passagers\_descendre] est un sous-ensemble des passagers représentant les passagers souhaitant descendre du bus au prochain arrêt.\\
 		\end{description}
 		
-	\subsection{Les événements}
-		Pour définir les gardes de nos événements, nous avons utilisé le booléen \textbf{bus\_roule}, qui est à vrai si le bus est en mouvement et à faux si le bus est à un arrêt.\\
+	\subsection{Les évènements}
+		Pour définir les gardes de nos évènements, nous avons utilisé le booléen \textbf{bus\_roule}, qui est à vrai si le bus est en mouvement et à faux si le bus est à un arrêt.\\
 		
 		\begin{description}
-			\item[bus\_arrive] est l'événement qui représente le fait que le bus se stoppe à un arrêt.
+			\item[bus\_arrive] est l'évènement qui représente le fait que le bus se stoppe à un arrêt.
 			
-			Cet événement peut se produire uniquement si le bus roule. 
+			Cet évènement peut se produire uniquement si le bus roule. 
 			
-			L'effet de l'événement est simplement d'arrêter le bus.\\
+			L'effet de l'évènement est simplement d'arrêter le bus.\\
 		
-			\item[bus\_repart] est l'événement qui représente le fait que le bus repart d'un arrêt.
+			\item[bus\_repart] est l'évènement qui représente le fait que le bus repart d'un arrêt.
 			
 			Cet évènement peut se produire uniquement si le bus est arrêté. De plus, le bus ne doit repartir qu'une fois que tous les passagers souhaitant descendre l'ont fait et que les usagers attendant à l'arrêt soient tous montés ou que le bus soit plein. \\
 			
 			Dans notre première implémentation, nous avions fait en sorte que le bus puisse s'arrêter puis repartir puis s'arrêter à nouveau dans une boucle infinie. Cela permettait au bus de pouvoir parcourir une multitude d'arrêts, en faisant monter et descendre un certain nombre de passager à chaque fois.\\
 			
-			Dans notre seconde implémentation, afin de ne pas avoir une exécution infinie et ajouter un variant, nous avons décidé que le bus ne pourrait que s'arrêter et repartir une seule fois. De ce fait, l'évènement \textbf{bus\_repart} qui précisait que le bus roule à nouveau, indique maintenant que la simulation se termine. Donc, lorsqu'elle est terminée, il n'est plus possible de faire aucun évènement. Nous obtenons donc une deadlock afin d'obtenir une terminaison.
+			Dans notre seconde implémentation, afin de ne pas avoir une exécution infinie et ajouter un variant, nous avons décidé que le bus ne pourrait que s'arrêter et repartir une seule fois. De ce fait, l'évènement \textbf{bus\_repart} qui précisait que le bus roulait à nouveau, indique maintenant que la simulation se termine. Donc, lorsqu'elle est terminée, il n'est plus possible de faire aucun évènement. Nous obtenons donc une deadlock afin d'obtenir une terminaison.
 			
 
 
-			\item[passager\_desc] est l'événement qui représente le fait qu'un passager descende du bus.
+			\item[passager\_desc] est l'évènement qui représente le fait qu'un passager descende du bus.
 			
-			Cet événement peut se produire uniquement si le bus est arrêté et qu'il y a au moins un passager qui souhaite descendre.
+			Cet évènement peut se produire uniquement si le bus est arrêté et qu'il y a au moins un passager qui souhaite descendre.
 			
-			L'effet de l'événement est de repasser le passager descendu en simple usager. \\
+			L'effet de l'évènement est de repasser le passager descendu en simple usager. \\
 			
-			\item[usager\_monte] est l'événement qui représente le fait qu'un passager monte dans le bus.
+			\item[usager\_monte] est l'évènement qui représente le fait qu'un passager monte dans le bus.
 			
-			Cet événement ne peut se produire que si le bus est arrêté, qu'au moins un usager souhaite monter et que tous les passagers voulant descendre l'ont fait.
+			Cet évènement ne peut se produire que si le bus est arrêté, qu'au moins un usager souhaite monter et que tous les passagers voulant descendre l'ont fait.
 			
-			L'effet de cet événement est de déplacer l'usager de l'ensemble des usagers attendant à l'arrêt vers l'ensemble représentant les passagers du bus.\\
+			L'effet de cet évènement est de déplacer l'usager de l'ensemble des usagers attendant à l'arrêt vers l'ensemble représentant les passagers du bus.\\
 		
-			\item[usager\_arrive] est l'événement représentant un usager arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
+			\item[usager\_arrive] est l'évènement représentant un usager arrivant à un arrêt, dans l'espoir de prendre le prochain bus.
 			
-			Cet événement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni à un arrêt, ni déjà passager du bus.
+			Cet évènement peut se produire à tout moment, tant qu'il reste au moins un usager qui n'est ni à un arrêt, ni déjà passager du bus.
 			
-			L'effet de l'événement est simplement d'ajouter l'usager à la liste des usagers souhaitant monter.\\
+			L'effet de l'évènement est simplement d'ajouter l'usager à la liste des usagers souhaitant monter.\\
 			
 			\item[passager\_veut\_desc] est l'évènement qui représente le fait qu'un passager du bus veuille descendre au prochain arrêt.
 			
@@ -106,11 +106,12 @@
 		\end{description}
 
 	\subsection{Le variant}
-		Maintenant que notre machine se termine nous avons réussi à mettre en place un variant. Pour ce faire, nous avons rajouté un contexte qui permet de convertir un booléen en entier qui va nous servir dans notre variable. Ce contexte s'appelle \textbf{BoolToInt}. Nous avons choisis comme variant le nombre de passagers voulant descendre, auquel on ajoute un entier représentant l'état de la simulation (0 pour terminée, sinon 1). Nous avons rajouté cet entier afin que le variant ait la valeur nulle dès que la simulation est terminée. Dans le cas contraire, le variant aurait eu la valeur nulle avant de repartir de l'arrêt. Nous avons réussi à prouver ce variant, ce qui démontre que notre machine se termine quoi qu'il arrive.
+		Maintenant que notre machine se termine nous avons réussi à mettre en place un variant. Pour ce faire, nous avons rajouté un contexte qui permet de convertir un booléen en entier qui va nous servir dans notre variable. Ce contexte s'appelle \textbf{BoolToInt}. Nous avons choisis comme variant le nombre de passagers voulant descendre, auquel on ajoute un entier représentant l'état de la simulation (0 pour terminée, sinon 1). Nous avons rajouté cet entier afin que le variant ait la valeur nulle dès que la simulation est terminée. Dans le cas contraire, le variant aurait eu la valeur nulle avant de repartir de l'arrêt. Nous avons réussi à prouver ce variant, ce qui démontre que notre machine se termine quoi qu'il arrive. La mise en place de celui-ci nous a posé des difficultés et nous a obligé de passer de notre première implémentation où notre bus roulait d'arrêt en arrêt dans une boucle infinie, à une implémentation où la simulation se termine dès que le bus repart du premier arrêt. Nous avons simplifié notre modèle pour que la preuve de terminaison soit réalisable.
 		
 	\subsection{Cas de l'arrêt du bus}
-		Dans notre première implémentation, nous avions rajouté une garde sur l'évènement \textbf{bus\_arrive} permettant de préciser au bus de ne s'arrêter que lorsque c'est nécessaire. En effet, il ne pouvait s'arrêter que si des passagers voulaient descendre ou si des usagers voulaient monter et que le bus n'était pas remplit. On peut trouver dans l'évènement cette garde en commentaire. Nous l'avons finalement enlevée car celle-ci compliquait nos preuves et que ce n'est pas demandé dans le sujet. Dorénavant notre bus s'arrête à tout moment.
+		Dans notre première implémentation, nous avions rajouté une garde sur l'évènement \textbf{bus\_arrive} permettant de préciser au bus de ne s'arrêter que lorsque c'était nécessaire. En effet, il ne pouvait s'arrêter que si des passagers voulaient descendre ou si des usagers voulaient monter et que le bus n'était pas remplit. On peut trouver dans l'évènement cette garde en commentaire. Nous l'avons finalement enlevée car celle-ci compliquait nos preuves et que ce n'est pas demandé dans le sujet. Dorénavant notre bus peut s'arrêter à tout moment.
 	
+\newpage
 \section{MachineBus1}
 	La \textbf{MachineBus1} est le premier raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la gestion d'usagers prioritaires.\\
 		
@@ -162,11 +163,11 @@
 		
 
 \subsection{DeadLock Freeness}
-	Afin de prouver que notre premier raffinement n'a pas de situations	de blocages, nous avons vérifié que le modèle n'a pas de deadlocks évidentes à l'aide du plug-in "ProB". Vous pouvez voir nos résultats sur l'image ci-dessous. Afin de garantir ce résultat, nous avons rajouté un théorème ou DeadLock Freeness. Nous avons réussi à le prouver, ce qui justifie que cette machine n'a aucun blocage. \\
+	Afin de prouver que notre premier raffinement n'a pas de situations	de blocages évidentes, nous avons vérifié le modèle à l'aide du plug-in "ProB". Vous pouvez voir nos résultats sur l'image ci-dessous. Afin de garantir ce résultat et d'éviter toutes les deadlocks, nous avons rajouté un théorème ou DeadLock Freeness. Nous avons réussi à le prouver, ce qui certifie que cette machine n'a aucun blocage. \\
 	
 	\includegraphics[scale=0.8]{checkMachineBus1.png}
 	
-	
+\newpage
 \section{MachineBus2}	
 	La \textbf{MachineBus2} est le second raffinement de la machine de base \textbf{MachineBus0}. Elle intègre la notion de file sur les usagers non prioritaires.\\
 
@@ -176,15 +177,15 @@
 		\begin{description}
 			\item[usager\_monte\_non\_prioritaire] est l'évènement représentant un usager non prioritaire qui monte dans le bus.
 			Cet évènement peut se produire lorsque le bus est à l'arrêt, qu'il n'y a aucun passager voulant descendre, que le bus n'est pas plein, qu'il y a des usagers non prioritaires voulant monter, qu'il n'y a pas d'usagers prioritaires voulant monter et que l'usager voulant monter a la priorité maximale et se trouve à la tête de la file.
-			L'effet de l'évènement est d'ajouter l'usager à la liste des passagers du bus ainsi que de l'enlever de la liste des usagers à l'arrêt.
+			L'effet de l'évènement est d'ajouter l'usager à la liste des passagers du bus, de l'enlever de la liste des usagers à l'arrêt et d'incrémenter l'indice de tête de file \textbf{oldest}.
 			
 			\item[usager\_arrive\_non\_prioritaire] est l'évènement représentant un usager non prioritaire qui arrive à l'arrêt de bus.
 			Cet évènement peut se produire lorsque l'usager n'est ni est un passager, ni à l'arrêt et qu'il n'est pas dans la file des usagers non prioritaires.
-			L'effet de l'évènement est d'ajouter l'usager à la liste des usagers non prioritaires attendant à l'arrêt ainsi qu'à la liste des priorités.
+			L'effet de l'évènement est d'ajouter l'usager à la liste des usagers non prioritaires attendant à l'arrêt ainsi que d'incrémenter l'indice de fin de file \textbf{newest}.
 
 		\end{description}
 		
 	\subsection{Explication de la file de priorité}
-		Nous avons décidé d'implémenter la file présentée dans les exemples du cours. Nous avons compris son fonctionnement et nous l'avons adaptée à ce projet. Lorsqu'un usager non prioritaire arrive à l'arrêt, il est ajouté à la liste des personnes non prioritaires attendant à l'arrêt, mais nous ... A COMPLETER
+		Nous avons décidé d'implémenter la liste en FIFO (First In First Out) présentée dans sur le site de M. Casteran. Nous avons compris son fonctionnement et nous l'avons adaptée à ce projet. Lorsqu'un usager non prioritaire arrive à l'arrêt, il est ajouté à la liste des personnes non prioritaires attendant à l'arrêt et l'indice de fin de file, \textbf{newest}, est incrémenté. Nous avons un second indice, \textbf{oldest}, qui nous permet de connaître le premier usager de la file. A chaque fois qu'un de ces usagers monte dans le bus, celui-ci est déplacé de l'ensemble des usagers non prioritaires attendant à l'arrêt vers l'ensemble des passagers du bus. Ensuite, l'indice \textbf{oldest} est incrémenté, afin qu'il pointe toujours sur le plus ancien usager non prioritaire attendant à l'arrêt.
 		
 \end{document}
