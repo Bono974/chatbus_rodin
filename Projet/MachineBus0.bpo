@@ -75,10 +75,10 @@
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTALLHYPsimulation_en_couru"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTsimulation_en_couru" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="passagers_descendre'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="usagers_a_l_arret'" org.eventb.core.type="ℙ(Usagers)"/>
-<org.eventb.core.poIdentifier name="bus_roule'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="simulation_en_cours'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="bus_roule'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="passagers_descendre'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPsimulation_en_couru" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTsimulation_en_couru" org.eventb.core.poStamp="0"/>
@@ -110,8 +110,8 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poSequent#bus_repart\/NAT|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTsimulation_en_courw" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="bus_roule'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="simulation_en_cours'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="bus_roule'" org.eventb.core.type="BOOL"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTHYPsimulation_en_courw(" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTsimulation_en_courw" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bus_roule=FALSE" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#*|org.eventb.core.guard#'"/>
@@ -160,8 +160,8 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poSequent#passager_desc\/NAT|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTsimulation_en_courx" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="passagers_descendre'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="passagers_descendre'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPsimulation_en_courx" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTsimulation_en_courx" org.eventb.core.poStamp="0">
@@ -200,8 +200,8 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTsimulation_en_coury" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Usagers"/>
 <org.eventb.core.poIdentifier name="usagers_a_l_arret'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Usagers"/>
 <org.eventb.core.poIdentifier name="passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTHYPsimulation_en_coury)" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTsimulation_en_coury" org.eventb.core.poStamp="0">
@@ -214,8 +214,8 @@
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="simulation_en_cours=TRUE" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#,|org.eventb.core.guard#."/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTsimulation_en_courz" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="usagers_a_l_arret'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="u" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="usagers_a_l_arret'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPsimulation_en_courz" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTsimulation_en_courz" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈Usagers ∖ (usagers_a_l_arret∪passagers)" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#-|org.eventb.core.guard#'"/>
@@ -230,8 +230,8 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTsimulation_en_cour{" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="passagers_descendre'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="passagers_descendre'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPsimulation_en_cour{" org.eventb.core.parentSet="/Projet/MachineBus0.bpo|org.eventb.core.poFile#MachineBus0|org.eventb.core.poPredicateSet#EVTIDENTsimulation_en_cour{" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bus_roule=TRUE" org.eventb.core.source="/Projet/MachineBus0.bum|org.eventb.core.machineFile#MachineBus0|org.eventb.core.event#=|org.eventb.core.guard#'"/>
